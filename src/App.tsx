@@ -172,6 +172,7 @@ export const App: React.FC = () => {
           <SearchFilter
             selectedCategory={selectedCategory}
             totalCount={totalCases}
+            annualTotal={categoryCounts.find((c) => c.category === selectedCategory)?.count}
             search={search}
             district={district}
             onSearchChange={handleSearchChange}

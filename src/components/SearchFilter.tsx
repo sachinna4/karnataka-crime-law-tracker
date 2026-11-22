@@ -5,6 +5,7 @@ import { CrimeCategoryType, KARNATAKA_DISTRICTS } from '../types/crime';
 interface SearchFilterProps {
   selectedCategory: CrimeCategoryType;
   totalCount: number;
+  annualTotal?: number;
   search: string;
   district: string;
   onSearchChange: (value: string) => void;
@@ -14,6 +15,7 @@ interface SearchFilterProps {
 export const SearchFilter: React.FC<SearchFilterProps> = ({
   selectedCategory,
   totalCount,
+  annualTotal,
   search,
   district,
   onSearchChange,
@@ -45,12 +47,21 @@ export const SearchFilter: React.FC<SearchFilterProps> = ({
           <h2 className="text-base font-semibold text-slate-900 tracking-tight">
             {selectedCategory}
           </h2>
-          <p className="text-xs text-slate-500 font-mono mt-0.5">
-            Total Records:{' '}
-            <span className="font-semibold text-slate-800">
-              {new Intl.NumberFormat('en-IN').format(totalCount)}
+          <div className="flex flex-wrap items-center gap-2 text-xs font-mono mt-0.5">
+            <span className="text-slate-500">
+              Total Records:{' '}
+              <span className="font-semibold text-slate-900">
+                {new Intl.NumberFormat('en-IN').format(annualTotal ?? totalCount)}
+              </span>
             </span>
-          </p>
+            <span className="text-slate-300">•</span>
+            <span className="text-slate-500">
+              Verified Dossiers:{' '}
+              <span className="font-semibold text-indigo-700">
+                {new Intl.NumberFormat('en-IN').format(totalCount)}
+              </span>
+            </span>
+          </div>
         </div>
 
         {/* Filters */}
