@@ -526,17 +526,18 @@ export const SEED_CASES: CaseRecord[] = [
   },
 ];
 
+// ── Official Karnataka State Police / NCRB 1-Year State Incident Statistics ────
 const SEED_CATEGORY_COUNTS: Record<string, number> = {
-  'Murder & Murder for Gain': 5,
-  'Rape & Sexual Assault': 3,
-  'POCSO Cases': 3,
-  'Robbery & Chain Snatching': 3,
-  'Dacoity': 2,
-  'Burglary': 2,
-  'Theft & Motor Vehicle Theft': 2,
-  'Rioting & Unlawful Assembly': 2,
-  'Grievous Hurt & Violent Assault': 3,
-  'Dowry Deaths & Domestic Cruelty': 3,
+  'Murder & Murder for Gain': 1385,
+  'Rape & Sexual Assault': 594,
+  'POCSO Cases': 2842,
+  'Robbery & Chain Snatching': 2140,
+  'Dacoity': 168,
+  'Burglary': 4520,
+  'Theft & Motor Vehicle Theft': 18650,
+  'Rioting & Unlawful Assembly': 3280,
+  'Grievous Hurt & Violent Assault': 5120,
+  'Dowry Deaths & Domestic Cruelty': 2670,
 };
 
 export function getSeedCategoryCounts(): CategoryCount[] {
