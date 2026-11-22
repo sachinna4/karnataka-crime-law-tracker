@@ -9,7 +9,6 @@ import {
   DataMode,
 } from '../types/crime';
 import {
-  getSeedCategoryCounts,
   getSeedCases,
 } from '../data/karnatakaSeedData';
 
